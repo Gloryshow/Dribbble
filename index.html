@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dribbble Landing Clone</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid mx-lg-5">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" style="display: flex; flex-direction: column; justify-content: space-evenly; width: 3rem; height: 3rem;">
+            <div style="background-color: black; border: 1px solid black; width:100%; height: 10%;"></div>
+            <div style="background-color: black; border: 1px solid black; width:80%; height: 10%;"></div>
+            <div style="background-color: black; border: 1px solid black; width:50%; height: 10%;"></div>
+            </button>
+
+            <a class="navbar-brand disabled ps-3 me-auto" href="index.html"><img src="images/logo.svg" width="100px" alt="Dribbble"></a>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                <li class="nav-item dropdown hover-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Explore
+                    </a>
+                    <ul class="dropdown-menu p-3">
+                        <li class="py-2"><a class="dropdown-item" href="#"><img src="images/scale-up.svg" alt="" loading="lazy" class="me-2">Popular</a></li>
+                        <li class="py-2"><a class="dropdown-item" href="#"><img src="images/design-geminilogo.svg" alt="" loading="lazy" class="me-2">New and Noteworthy</a></li>
+                        <!-- hr -->
+                        <li><hr class="dropdown-divider mx-auto " width="90%"></li>
+                        <!-- second part -->
+                        <li class="py-2"><a class="dropdown-item" href="#">Product Design</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Web Design</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Animation</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Branding</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Illustration</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Mobile</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Typography</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Paint</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown hover-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Hire Talent
+                    </a>
+                    <div class="hired-talent dropdown-menu p-4 shadow-lg border-0 rounded-4 mt-2" style="max-width: 700px; border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
+                        <div class="row g-4">
+                            <div class="col-md-6 d-flex">
+                                <div class="me-3 fs-3"><img src="images/gemini-menubook.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Start a Project Brief</h6>
+                                    <p class="small text-muted mb-0">Get instant talent recommendations</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex">
+                                <div class="me-3 fs-3"><img src="images/tag.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Explore Services</h6>
+                                    <p class="small text-muted mb-0">Hire quickly with pre-packaged services</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex">
+                            <div class="me-3 fs-3"><img src="images/search-icon.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Browse Profiles</h6>
+                                    <p class="small text-muted mb-0">Find and message talent directly</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex">
+                                <div class="me-3 fs-3"><img src="images/pin.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Post a Full-Time Job</h6>
+                                    <p class="small text-muted mb-0">Reach designers looking for roles</p>
+                                </div>
+                            
+
+                        </div>
+                        <hr class="my-3">
+
+                                <div class="small fw-semibold text-black"> 
+                                    <img src="images/book.svg" alt="" sizes="12px">
+                                    Learn more about hiring work on dribbble <img src="images/" sizes="16px">
+                                </div>
+                        </div>
+                </div>
+                </li>
+
+                <li class="nav-item dropdown hover-dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Get Hired
+                </a>
+                <div class="get-hired dropdown-menu p-4 shadow-lg border-0 rounded-4 mt-2" style="width: 700px; border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
+                    <div class="row g-4">
+                        <div class="col-6 d-flex btn-div">
+                            <div class="me-3 fs-3"><img src="images/menubook.svg" alt="" sizes="20px"></div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Project Brief</h6>
+                                <p class="small text-muted mb-0">Browse open client project briefs</p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex">
+                            <span class="">Upgrade to Pro → <br> Advertise with Us →</span>
+                        </div>
+                        <!-- second line -->
+                         <div class="col-6 d-flex btn-div">
+                            <div class="me-3 fs-3"><img src="images/save-plus.svg" alt="" sizes="20px"></div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Add a Service</h6>
+                                <p class="small text-muted mb-0">Let clients purchase your services</p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex">
+                        </div>
+
+                        <div class="col-6 d-flex btn-div">
+                            <div class="me-3 fs-3"><img src="images/bag.svg" alt="" sizes="20px"></div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Full-Time Jobs</h6>
+                                <p class="small text-muted mb-0">
+                                Apply to full-time design roles
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex">
+                        </div>
+
+                    
+                        <hr class="my-3">
+
+                                <div class="small fw-semibold text-black"> 
+                                    <img src="images/book.svg" alt="" sizes="12px">
+                                    Learn more about hiring work on dribbble <img src="images/" sizes="16px">
+                                </div>
+                        </div>
+                </div>
+                </li>
+
+                <li class="nav-item dropdown hover-dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Community
+                </a>
+                
+                <div class="community dropdown-menu p-4 shadow-lg border-0 rounded-4 mt-2" style="width: 400px; border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
+                    <div class="row g-4">
+                        <div class="col-12 d-flex btn-div btn">
+                            <div class="me-3 fs-3"><img src="images/layout-svg.svg" alt="" sizes="20px"></div>
+                            <a href="blog.html" class="text-black text-start btn">
+                                <h6 class="fw-semibold mb-1">Blog</h6>
+                                <p class="small text-muted mb-0">Design inspiration, stories, and tips</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-12 d-flex btn-div btn text-start">
+                            <div class="me-3 fs-3"><img src="images/cup-achieve.svg" alt="" sizes="20px"></div>
+                            <a href="#" class="text-black text-start btn">
+                                <h6 class="fw-semibold mb-1">Playoffs</h6>
+                                <p class="small text-muted mb-0">Join creative challenges and show your skills</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-12 d-flex btn-div btn">
+                            <div class="me-3 fs-3"><img src="images/question-help.svg" alt="" sizes="20px"></div>
+                            <a href="blog.html" class="text-black text-start btn">
+                                <h6 class="fw-semibold mb-1">Help Center</h6>
+                                <p class="small text-muted mb-0">Get quick answers and learn how to use Dribbble</p>
+                            </a>
+                        </div>
+
+                        <hr class="my-3">
+
+                                <div class="small fw-semibold text-black"> 
+                                   <span>Follow Us </span><img src="images/instagram.svg" width="20px" class="mx-2 cursol"> <img src="images/x-logo.svg" width="20px" class="mx-2 cursol"> <img src="images/pinterest.svg" width="20px" class="mx-2 cursol"> <img src="images/youtube-logo.svg" width="20px" class="mx-2 cursol"> <img src="images/tiktok.svg" alt="" width="20px" class="mx-2 cursol"> <img src="images/trend-icon.svg" alt="" width="20px" class="mx-2 cursol">
+                                </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                </li>
+            </ul>
+
+
+            <div class="d-flex ms-auto align-items-center gap-3 mt-3 mt-lg-0">
+                <a href="#" class="btn-signup px-3 py-2 text-decoration-none d-none d-md-block rounded-pill">Sign&nbsp;up</a>
+                <a href="#" class="btn-login text-light px-3 py-2 text-decoration-none rounded-pill">Log&nbsp;in</a>
+             </div>
+            </div>
+            
+            
+            
+        </div>
+        </nav>
+<!-- MAIN SECTION -->
+<div class="container hero-section">
+
+    <div class="row align-items-center">
+
+        <!-- LEFT SIDE TEXT -->
+        <div class="col-lg-6 mb-5">
+            <h1 class="hero-title">Discover the<br>World’s Top<br>Designers</h1>
+
+            <p class="hero-subtitle mt-3">
+                Explore work from the most talented and accomplished designers ready to take on your next project.
+            </p>
+
+            <!-- Category Selector -->
+            <div class="d-flex gap-3 my-4 explore">
+                <div class="category-btn" style="background-color: black; color: white;"><strong><img src="Images/material-symbols--add-photo-alternate-sharp (1).svg" alt=""></strong> Shots</div>
+                <div class="category-btn">Designers</div>
+                <div class="category-btn">Services</div>
+            </div>
+
+            <!-- Search -->
+            <div class="search-box d-flex align-items-center">
+                <input type="text" placeholder="What type of design are you interested in?"
+                       class="form-control border-0 bg-transparent">
+                <button class="btn  rounded-circle">
+                    <img src="Images/search.png" alt="">
+                </button>
+            </div>
+
+            <!-- Popular tags -->
+            <div class="mt-3">
+                <strong>Popular:</strong>
+                <button class="btn btn-light border category-btn">dashboard</button>
+                <button class="btn btn-light border category-btn">landing page</button>
+                <button class="btn btn-light border category-btn">e-commerce</button>
+                <button class="btn btn-light border category-btn">logo</button>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE VIDEO -->
+        <div class="col-lg-6 d-md-block d-none">
+            <div class="video-wrapper shadow">
+                <video autoplay muted loop playsinline width="100%">
+                    <source src="Videos/55d8f62103d1ecc245b4dd35f264528c.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bottom-banner">
+    <div class="d-flex align-items-center gap-3">
+        <span>New clients get $100 off their first payment of $1,000+ on Dribbble with code HELLO100 🎉</span>
+        <button class="btn btn-light text-dark">Terms Apply</button>
+    </div>
+</div>
+
+<section class="drb-tabs-section container mt-4">
+
+    <!-- Top banner / Get Matched -->
+    <div class="get-matched-banner d-flex align-items-center">
+        <button class="btn btn-match">
+            <i class="bi bi-stars"></i> Get Matched Now
+            <span class="new-tag">NEW</span>
+        </button>
+        <p class="ms-3 text-muted">
+            Tell us what you need and instantly get matched with world-class talent ready to work on your project.
+        </p>
+    </div>
+
+    <!-- Category tabs -->
+    <ul class="nav nav-pills mt-4 drb-tabs">
+        <li class="nav-item"><a class="nav-link active" href="#">Popular</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Animation</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Branding</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Illustration</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Mobile</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Print</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Product Design</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Typography</a></li>
+    </ul>
+
+    <!-- Filters Row -->
+    <div class="d-flex justify-content-end mt-3">
+        <button class="btn btn-outline-light filter-btn">
+            <i class="bi bi-funnel"></i> Filters
+        </button>
+    </div>
+</section>
+
+
+<section class="container mt-4">
+    <div class="row g-4">
+
+        <!-- CARD 1 -->
+        <div class="col-md-3">
+            <div class="drb-card">
+                <img src="Images/still-fa7d1350a9e6080328ad574795a019d3.webp" class="img-fluid rounded" alt="">
+                <div class="card-meta mt-2 d-flex align-items-center">
+                    <i class="bi bi-dot"></i>
+                    <span class="author-name">Emote</span>
+                    <span class="team-tag ms-2">TEAM</span>
+                    <span class="ms-auto stats"><i class="bi bi-heart"></i> 201 • 6.1k</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-md-3">
+            <div class="drb-card">
+                <img src="Images/1327c1d42e01aa8ad27e3ca14add500d.webp" class="img-fluid rounded" alt="">
+                <div class="card-meta mt-2 d-flex align-items-center">
+                    <span class="author-name">Deividas Bielskis</span>
+                    <span class="pro-tag ms-2">PRO</span>
+                    <span class="ms-auto stats"><i class="bi bi-heart"></i> 91 • 3.3k</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="col-md-3">
+            <div class="drb-card">
+                <img src="Images/still-3c1b181aa4ea4f60111ef93bfb4e38c3.webp" class="img-fluid rounded" alt="">
+                <div class="card-meta mt-2 d-flex align-items-center">
+                    <span class="author-name">Purrweb UI/UX</span>
+                    <span class="team-tag ms-2">TEAM</span>
+                    <span class="ms-auto stats"><i class="bi bi-heart"></i> 127 • 8.1k</span>
+                </div>
+            </div>
+        </div>
+
+         <!-- CARD 4 -->
+        <div class="col-md-3">
+            <div class="drb-card">
+                <img src="Images/6db44959294a42257f631697ddf2e70b.webp" class="img-fluid rounded" alt="">
+                <div class="card-meta mt-2 d-flex align-items-center">
+                    <span class="author-name">Purrweb UI/UX</span>
+                    <span class="team-tag ms-2">TEAM</span>
+                    <span class="ms-auto stats"><i class="bi bi-heart"></i> 127 • 8.1k</span>
+                </div>
+            </div>
+        </div>
+         
+            <!-- CARD 5 -->
+        <div class="col-md-3">
+            <div class="drb-card">
+                    <img src="Images/6db44959294a42257f631697ddf2e70b.webp" class="img-fluid rounded" alt="Weight Loss App">
+                    <div class="card-meta mt-2 d-flex align-items-center">
+                        <span class="author-name">Purrweb UI/...</span>
+                        <span class="team-tag ms-2">TEAM</span>
+                        <span class="ms-auto stats"><i class="bi bi-heart"></i> 155 • 10.2k</span>
+                    </div>
+            </div>
+        </div>
+
+            <!-- CARD 6 -->
+        <div class="col-md-3">
+            <div class="drb-card">
+                <img src="Images/6db44959294a42257f631697ddf2e70b.webp" class="img-fluid rounded" alt="Lepisov Brand">
+                <div class="card-meta mt-2 d-flex align-items-center">
+                    <span class="author-name">Lepisov Brand</span>
+                    <span class="team-tag ms-2">TEAM</span>
+                    <span class="ms-auto stats"><i class="bi bi-heart"></i> 57 • 4.7k</span>
+                </div>
+            </div>
+        </div>
+
+            <!-- CARD 7 -->
+        <div class="col-md-3">
+            <div class="drb-card">
+                <img src="Images/new 2.webp" class="img-fluid rounded" alt="Alex Krugli">
+                <div class="card-meta mt-2 d-flex align-items-center">
+                    <span class="author-name">Alex Krugli</span>
+                    <span class="pro-tag ms-2">PRO</span>
+                    <span class="ms-auto stats"><i class="bi bi-heart"></i> 56 • 5.8k</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 8 -->
+        <div class="col-md-3">
+            <div class="drb-card">
+                <img src="Images/new 3.webp" class="img-fluid rounded" alt="Dalibor Pajic">
+                <div class="card-meta mt-2 d-flex align-items-center">
+                    <span class="author-name">Dalibor Pajic</span>
+                    <span class="pro-tag ms-2">PRO</span>
+                    <span class="ms-auto stats"><i class="bi bi-heart"></i> 62 • 4.8k</span>
+                </div>
+            </div>
+        </div>
+
+            <!-- CARD 9 -->
+        <div class="col-md-3">
+            <div class="drb-card">
+                <img src="Images/6db44959294a42257f631697ddf2e70b.webp" class="img-fluid rounded" alt="">
+                <div class="card-meta mt-2 d-flex align-items-center">
+                    <span class="author-name">Purrweb UI/UX</span>
+                    <span class="team-tag ms-2">TEAM</span>
+                    <span class="ms-auto stats"><i class="bi bi-heart"></i> 127 • 8.1k</span>
+                </div>
+            </div>
+        </div>
+
+            <!-- CARD 10 -->
+        <div class="col-md-3">
+            <div class="drb-card">
+                <img src="Images/6db44959294a42257f631697ddf2e70b.webp" class="img-fluid rounded" alt="">
+                <div class="card-meta mt-2 d-flex align-items-center">
+                    <span class="author-name">Purrweb UI/UX</span>
+                    <span class="team-tag ms-2">TEAM</span>
+                    <span class="ms-auto stats"><i class="bi bi-heart"></i> 127 • 8.1k</span>
+                </div>
+            </div>
+        </div>
+           
+            <div class="col-md-3">
+                <div class="drb-card">
+                    <img src="Images/new 6.webp" class="img-fluid rounded" alt="Emote">
+                    <div class="card-meta mt-2 d-flex align-items-center">
+                        <span class="author-name">Emote</span>
+                        <span class="team-tag ms-2">TEAM</span>
+                        <span class="ms-auto stats"><i class="bi bi-heart"></i> 210 • 6.0k</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="drb-card">
+                    <img src="Images/new 5.webp" class="img-fluid rounded" alt="Deividas Bielskis">
+                    <div class="card-meta mt-2 d-flex align-items-center">
+                        <span class="author-name">Deividas Bielskis</span>
+                        <span class="pro-tag ms-2">PRO</span>
+                        <span class="ms-auto stats"><i class="bi bi-heart"></i> 95 • 3.4k</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="drb-card">
+                    <img src="Images/still-3c1b181aa4ea4f60111ef93bfb4e38c3.webp" class="img-fluid rounded" alt="Purrweb UI/UX">
+                    <div class="card-meta mt-2 d-flex align-items-center">
+                        <span class="author-name">Purrweb UI/UX</span>
+                        <span class="team-tag ms-2">TEAM</span>
+                        <span class="ms-auto stats"><i class="bi bi-heart"></i> 130 • 8.2k</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="drb-card">
+                    <img src="Images/6db44959294a42257f631697ddf2e70b.webp" class="img-fluid rounded" alt="Purrweb UI/UX">
+                    <div class="card-meta mt-2 d-flex align-items-center">
+                        <span class="author-name">Purrweb UI/UX</span>
+                        <span class="team-tag ms-2">TEAM</span>
+                        <span class="ms-auto stats"><i class="bi bi-heart"></i> 122 • 7.8k</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="drb-card">
+                    <img src="Images/new 7.webp" class="img-fluid rounded" alt="Weight Loss App">
+                    <div class="card-meta mt-2 d-flex align-items-center">
+                        <span class="author-name">Purrweb UI/...</span>
+                        <span class="team-tag ms-2">TEAM</span>
+                        <span class="ms-auto stats"><i class="bi bi-heart"></i> 155 • 10.2k</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="drb-card">
+                    <img src="Images/new 5.webp" class="img-fluid rounded" alt="Lepisov Brand">
+                    <div class="card-meta mt-2 d-flex align-items-center">
+                        <span class="author-name">Lepisov Brand</span>
+                        <span class="team-tag ms-2">TEAM</span>
+                        <span class="ms-auto stats"><i class="bi bi-heart"></i> 57 • 4.7k</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="drb-card">
+                    <img src="Images/new 5.webp" class="img-fluid rounded" alt="Alex Krugli">
+                    <div class="card-meta mt-2 d-flex align-items-center">
+                        <span class="author-name">Alex Krugli</span>
+                        <span class="pro-tag ms-2">PRO</span>
+                        <span class="ms-auto stats"><i class="bi bi-heart"></i> 56 • 5.8k</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="drb-card">
+                    <img src="Images/new 3.webp" class="img-fluid rounded" alt="Dalibor Pajic">
+                    <div class="card-meta mt-2 d-flex align-items-center">
+                        <span class="author-name">Dalibor Pajic</span>
+                        <span class="pro-tag ms-2">PRO</span>
+                        <span class="ms-auto stats"><i class="bi bi-heart"></i> 62 • 4.8k</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3"><div class="drb-card"><img src="Images/still-fa7d1350a9e6080328ad574795a019d3.webp" class="img-fluid rounded" alt="Emote"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Emote</span><span class="team-tag ms-2">TEAM</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 203 • 6.2k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/1327c1d42e01aa8ad27e3ca14add500d.webp" class="img-fluid rounded" alt="Deividas Bielskis"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Deividas Bielskis</span><span class="pro-tag ms-2">PRO</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 88 • 3.0k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/still-3c1b181aa4ea4f60111ef93bfb4e38c3.webp" class="img-fluid rounded" alt="Purrweb UI/UX"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Purrweb UI/UX</span><span class="team-tag ms-2">TEAM</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 140 • 8.5k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/6db44959294a42257f631697ddf2e70b.webp" class="img-fluid rounded" alt="Purrweb UI/UX"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Purrweb UI/UX</span><span class="team-tag ms-2">TEAM</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 119 • 7.6k</span></div></div></div>
+
+            <div class="col-md-3"><div class="drb-card"><img src="Images/new 1.webp" class="img-fluid rounded" alt="Weight Loss App"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Purrweb UI/...</span><span class="team-tag ms-2">TEAM</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 150 • 9.9k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/new 5.webp" class="img-fluid rounded" alt="Lepisov Brand"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Lepisov Brand</span><span class="team-tag ms-2">TEAM</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 60 • 4.9k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/new 4.webp" class="img-fluid rounded" alt="Alex Krugli"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Alex Krugli</span><span class="pro-tag ms-2">PRO</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 58 • 6.0k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/new 5.webp" class="img-fluid rounded" alt="Dalibor Pajic"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Dalibor Pajic</span><span class="pro-tag ms-2">PRO</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 63 • 5.0k</span></div></div></div>
+
+            <div class="col-md-3"><div class="drb-card"><img src="Images/still-fa7d1350a9e6080328ad574795a019d3.webp" class="img-fluid rounded" alt="Emote"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Emote</span><span class="team-tag ms-2">TEAM</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 199 • 6.4k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/1327c1d42e01aa8ad27e3ca14add500d.webp" class="img-fluid rounded" alt="Deividas Bielskis"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Deividas Bielskis</span><span class="pro-tag ms-2">PRO</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 90 • 3.2k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/still-3c1b181aa4ea4f60111ef93bfb4e38c3.webp" class="img-fluid rounded" alt="Purrweb UI/UX"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Purrweb UI/UX</span><span class="team-tag ms-2">TEAM</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 128 • 8.0k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/6db44959294a42257f631697ddf2e70b.webp" class="img-fluid rounded" alt="Purrweb UI/UX"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Purrweb UI/UX</span><span class="team-tag ms-2">TEAM</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 121 • 7.9k</span></div></div></div>
+
+            <div class="col-md-3"><div class="drb-card"><img src="Images/new 7.webp" class="img-fluid rounded" alt="Weight Loss App"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Purrweb UI/...</span><span class="team-tag ms-2">TEAM</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 152 • 10.0k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/new 6.webp" class="img-fluid rounded" alt="Lepisov Brand"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Lepisov Brand</span><span class="team-tag ms-2">TEAM</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 59 • 4.6k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/new 5.webp" class="img-fluid rounded" alt="Alex Krugli"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Alex Krugli</span><span class="pro-tag ms-2">PRO</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 57 • 5.7k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/new 4.webp" class="img-fluid rounded" alt="Dalibor Pajic"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Dalibor Pajic</span><span class="pro-tag ms-2">PRO</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 61 • 4.6k</span></div></div></div>
+
+
+            <div class="col-md-3"><div class="drb-card"><img src="Images/still-fa7d1350a9e6080328ad574795a019d3.webp" class="img-fluid rounded" alt="Emote"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Emote</span><span class="team-tag ms-2">TEAM</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 205 • 6.3k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/1327c1d42e01aa8ad27e3ca14add500d.webp" class="img-fluid rounded" alt="Deividas Bielskis"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Deividas Bielskis</span><span class="pro-tag ms-2">PRO</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 92 • 3.1k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/still-3c1b181aa4ea4f60111ef93bfb4e38c3.webp" class="img-fluid rounded" alt="Purrweb UI/UX"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Purrweb UI/UX</span><span class="team-tag ms-2">TEAM</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 133 • 8.6k</span></div></div></div>
+            <div class="col-md-3"><div class="drb-card"><img src="Images/6db44959294a42257f631697ddf2e70b.webp" class="img-fluid rounded" alt="Purrweb UI/UX"><div class="card-meta mt-2 d-flex align-items-center"><span class="author-name">Purrweb UI/UX</span><span class="team-tag ms-2">TEAM</span><span class="ms-auto stats"><i class="bi bi-heart"></i> 125 • 8.0k</span></div></div></div>
+    </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
