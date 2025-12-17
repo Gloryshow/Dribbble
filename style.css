@@ -1,4 +1,4 @@
-/* LOGIN BUTTON */
+
 .btn-login {
     background: #0d0b21;
     color: #fff !important;
@@ -70,25 +70,25 @@ body {
     background-size: cover;
     background-position: center;
 }
-/* GLOBAL */
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #ffffff;
 }
 
-/* HERO SPACING */
+
 .hero-section {
     margin-top: 120px;
     margin-bottom: 120px;
 }
 
-/* NAVBAR */
+
 .navbar-brand {
     font-size: 28px;
     font-weight: 700;
 }
 
-/* TEXT */
+
 .hero-title {
     font-size: 56px;
     font-weight: 700;
@@ -100,7 +100,7 @@ body {
     color: #555;
 }
 
-/* CATEGORY BUTTONS */
+
 .category-btn {
     background: #f3f3f4;
     border-radius: 20px;
@@ -109,20 +109,19 @@ body {
     border: none;
 }
 
-/* SEARCH BOX */
+
 .search-box {
     background: #f3f3f4;
     border-radius: 35px;
     padding: 12px 20px;
 }
 
-/* VIDEO */
 .video-wrapper {
     border-radius: 20px;
     overflow: hidden;
 }
 
-/* FIXED BOTTOM BANNER */
+
 .bottom-banner {
     position: fixed;
     bottom: 0;
@@ -143,7 +142,7 @@ body {
 .explore .category-btn:hover {
     cursor: pointer;
 }
-/* Dropdown menu styling */
+
 .nav-item .dropdown-menu {
     border-radius: 16px;
     padding: 15px 0;
@@ -154,7 +153,7 @@ body {
     transition: all 0.2s ease;
 }
 
-/* Hover effect to show dropdown */
+
 .hover-dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
@@ -162,14 +161,14 @@ body {
     display: block;
 }
 
-/* Keep dropdown open when hovering inside it */
+
 .hover-dropdown .dropdown-menu:hover {
     display: block;
     opacity: 1;
     visibility: visible;
 }
 
-/* Better spacing for dropdown items */
+
 .dropdown-item {
     padding: 10px 20px;
     font-size: 15px;
@@ -248,7 +247,7 @@ body {
     border-radius: 10px;
 }
 
-/* Category Tabs */
+
 .drb-tabs .nav-link {
     color: #6d6d6d;
     font-weight: 500;
@@ -261,13 +260,13 @@ body {
     border-radius: 30px;
 }
 
-/* Filter Button */
+
 .filter-btn {
     border-radius: 20px;
     font-weight: 500;
 }
 
-/* Cards */
+
 .drb-card img {
     border-radius: 18px;
 }
@@ -302,14 +301,14 @@ body {
     color: #0d0c22;
 }
 
-/* Main title */
+
 .blog-title {
     font-size: 48px;
     line-height: 1.15;
     margin-bottom: 40px;
 }
 
-/* Date text */
+
 .blog-date {
     font-size: 14px;
     letter-spacing: 1px;
@@ -318,19 +317,18 @@ body {
     font-weight: 500;
 }
 
-/* Article title */
+
 .post-title {
     font-size: 32px;
     line-height: 1.25;
     color: #0d0c22;
 }
 
-/* Featured Image */
+
 .featured-img img {
     border-radius: 12px;
 }
 
-/* ---- SIDEBAR ---- */
 .sidebar {
     position: absolute;
     top: 120px;
@@ -356,9 +354,97 @@ body {
     color: #0d0c22;
 }
 
-/* Desktop alignment */
+
 @media (min-width: 992px) {
     .blog-container {
         width: 65%;
     }
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.card {
+  width: 260px;
+  height: 170px;
+  margin: 0 12px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps image clean */
+  border-radius: 16px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+
+.dribbble-navbar {
+  background-color: #ffffff;
+  padding: 16px 32px;
+  border-bottom: 1px solid #eee;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.dribbble-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0d0c22;
+  font-family: "Pacifico", cursive; 
+}
+
+.dribbble-logo:hover {
+  color: #0d0c22;
+}
+
+
+.dribbble-menu .nav-link {
+  color: #0d0c22;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 12px;
+}
+
+.dribbble-menu .nav-link:hover {
+  color: #ea4c89;
+}
+
+
+.dribbble-icons a {
+  color: #0d0c22;
+  margin-left: 16px;
+  font-size: 15px;
+}
+
+.dribbble-icons a:hover {
+  color: #ea4c89;
 }

@@ -5,132 +5,288 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dribbble Blog Clone</title>
 
-    <!-- BOOTSTRAP -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#"><img src="Images/drib_logo-removebg-preview.png" alt=""></a>
+    <style>
+        body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #0d0c22;
+}
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+.intro-text {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 900px;
+}
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="search-box d-flex align-items-center">
-                <input type="text" placeholder="What are you looking for?"
-                       class="form-control border-0 bg-transparent">
-                <button class="btn  rounded-circle">
-                    <img src="Images/search.png" alt="">
-                </button>
+
+.blog-item {
+  align-items: flex-start;
+}
+
+.blog-thumb {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.blog-date {
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: #6e6d7a;
+  font-weight: 600;
+}
+
+
+.blog-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 6px 0 10px;
+  cursor: pointer;
+}
+
+.blog-title:hover {
+ color: purple;
+}
+
+
+.blog-excerpt {
+  color: #6e6d7a;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+  .blog-item {
+    flex-direction: column;
+  }
+
+  .blog-thumb {
+    width: 100%;
+    height: auto;
+  }
+}
+
+    </style>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid mx-lg-5">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand disabled ps-3 me-auto" href="index.html"><img src="Images/drib_logo-removebg-preview.png" width="100px" alt="Dribbble"></a>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                <li class="nav-item dropdown hover-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Explore
+                    </a>
+                    <ul class="dropdown-menu p-3">
+                        <li class="py-2"><a class="dropdown-item" href="#"><img src="images/scale-up.svg" alt="" loading="lazy" class="me-2">Popular</a></li>
+                        <li class="py-2"><a class="dropdown-item" href="#"><img src="images/design-geminilogo.svg" alt="" loading="lazy" class="me-2">New and Noteworthy</a></li>
+                        <!-- hr -->
+                        <li><hr class="dropdown-divider mx-auto " width="90%"></li>
+                        <!-- second part -->
+                        <li class="py-2"><a class="dropdown-item" href="#">Product Design</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Web Design</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Animation</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Branding</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Illustration</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Mobile</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Typography</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Paint</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown hover-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Hire Talent
+                    </a>
+                    <div class="hired-talent dropdown-menu p-4 shadow-lg border-0 rounded-4 mt-2" style="max-width: 700px; border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
+                        <div class="row g-4">
+                            <div class="col-md-6 d-flex">
+                                <div class="me-3 fs-3"><img src="images/gemini-menubook.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Start a Project Brief</h6>
+                                    <p class="small text-muted mb-0">Get instant talent recommendations</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex">
+                                <div class="me-3 fs-3"><img src="images/tag.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Explore Services</h6>
+                                    <p class="small text-muted mb-0">Hire quickly with pre-packaged services</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex">
+                            <div class="me-3 fs-3"><img src="images/search-icon.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Browse Profiles</h6>
+                                    <p class="small text-muted mb-0">Find and message talent directly</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex">
+                                <div class="me-3 fs-3"><img src="images/pin.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Post a Full-Time Job</h6>
+                                    <p class="small text-muted mb-0">Reach designers looking for roles</p>
+                                </div>
+                            
+
+                        </div>
+                        <hr class="my-3">
+
+                                <div class="small fw-semibold text-black"> 
+                                    <img src="images/book.svg" alt="" sizes="12px">
+                                    Learn more about hiring work on dribbble <img src="images/" sizes="16px">
+                                </div>
+                        </div>
+                </div>
+                </li>
+
+                <li class="nav-item dropdown hover-dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Get Hired
+                </a>
+                <div class="get-hired dropdown-menu p-4 shadow-lg border-0 rounded-4 mt-2" style="width: 700px; border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
+                    <div class="row g-4">
+                        <div class="col-6 d-flex btn-div">
+                            <div class="me-3 fs-3"><img src="images/menubook.svg" alt="" sizes="20px"></div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Project Brief</h6>
+                                <p class="small text-muted mb-0">Browse open client project briefs</p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex">
+                            <span class="">Upgrade to Pro → <br> Advertise with Us →</span>
+                        </div>
+                        <!-- second line -->
+                         <div class="col-6 d-flex btn-div">
+                            <div class="me-3 fs-3"><img src="images/save-plus.svg" alt="" sizes="20px"></div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Add a Service</h6>
+                                <p class="small text-muted mb-0">Let clients purchase your services</p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex">
+                        </div>
+
+                        <div class="col-6 d-flex btn-div">
+                            <div class="me-3 fs-3"><img src="images/bag.svg" alt="" sizes="20px"></div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Full-Time Jobs</h6>
+                                <p class="small text-muted mb-0">
+                                Apply to full-time design roles
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex">
+                        </div>
+
+                    
+                        <hr class="my-3">
+
+                                <div class="small fw-semibold text-black"> 
+                                    <img src="images/book.svg" alt="" sizes="12px">
+                                    Learn more about hiring work on dribbble <img src="images/" sizes="16px">
+                                </div>
+                        </div>
+                </div>
+                </li>
+
+                <li class="nav-item dropdown hover-dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Community
+                </a>
+                
+                <div class="community dropdown-menu p-4 shadow-lg border-0 rounded-4 mt-2" style="width: 400px; border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
+                    <div class="row g-4">
+                        <div class="col-12 d-flex btn-div btn">
+                            <div class="me-3 fs-3"><img src="images/layout-svg.svg" alt="" sizes="20px"></div>
+                            <a href="blog.html" class="text-black text-start btn">
+                                <h6 class="fw-semibold mb-1">Blog</h6>
+                                <p class="small text-muted mb-0">Design inspiration, stories, and tips</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-12 d-flex btn-div btn text-start">
+                            <div class="me-3 fs-3"><img src="images/cup-achieve.svg" alt="" sizes="20px"></div>
+                            <a href="#" class="text-black text-start btn">
+                                <h6 class="fw-semibold mb-1">Playoffs</h6>
+                                <p class="small text-muted mb-0">Join creative challenges and show your skills</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-12 d-flex btn-div btn">
+                            <div class="me-3 fs-3"><img src="images/question-help.svg" alt="" sizes="20px"></div>
+                            <a href="blog.html" class="text-black text-start btn">
+                                <h6 class="fw-semibold mb-1">Help Center</h6>
+                                <p class="small text-muted mb-0">Get quick answers and learn how to use Dribbble</p>
+                            </a>
+                        </div>
+
+                        <hr class="my-3">
+
+                                <div class="small fw-semibold text-black"> 
+                                   <span>Follow Us </span><img src="images/instagram.svg" width="20px" class="mx-2 cursol"> <img src="images/x-logo.svg" width="20px" class="mx-2 cursol"> <img src="images/pinterest.svg" width="20px" class="mx-2 cursol"> <img src="images/youtube-logo.svg" width="20px" class="mx-2 cursol"> <img src="images/tiktok.svg" alt="" width="20px" class="mx-2 cursol"> <img src="images/trend-icon.svg" alt="" width="20px" class="mx-2 cursol">
+                                </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                </li>
+            </ul>
+
+
+            <div class="d-flex ms-auto align-items-center gap-3 mt-3 mt-lg-0">
+                <a href="signup.html" class="btn-signup px-3 py-2 text-decoration-none d-none d-md-block rounded-pill">Sign&nbsp;up</a>
+                <a href="login.html" class="btn-login text-light px-3 py-2 text-decoration-none rounded-pill">Log&nbsp;in</a>
+             </div>
             </div>
-           
-            <ul class="navbar-nav ms-4">
-                <li class="nav-item dropdown hover-dropdown">
-    <a class="nav-link fw-medium dropdown-toggle" href="#" id="exploreMenu">
-        Explore
-    </a>
-
-    <ul class="dropdown-menu" aria-labelledby="exploreMenu">
-        <li><a class="dropdown-item" href="#">Popular</a></li>
-        <li><a class="dropdown-item" href="#">New & Noteworthy</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Product Design</a></li>
-        <li><a class="dropdown-item" href="#">Web Design</a></li>
-        <li><a class="dropdown-item" href="#">Animation</a></li>
-        <li><a class="dropdown-item" href="#">Branding</a></li>
-        <li><a class="dropdown-item" href="#">Illustration</a></li>
-        <li><a class="dropdown-item" href="#">Mobile</a></li>
-        <li><a class="dropdown-item" href="#">Typography</a></li>
-        <li><a class="dropdown-item" href="#">Print</a></li>
-    </ul>
-</li>
-
-
-
-
-                <li class="nav-item dropdown hover-dropdown">
-    <a class="nav-link fw-medium dropdown-toggle" href="#" id="hireMenu">
-        Hire Talent
-    </a>
-
-    <ul class="dropdown-menu shadow d-grid row" aria-labelledby="hireMenu">
-        <li><a class="dropdown-item" href="#">Post a Job</a></li>
-        <li><a class="dropdown-item" href="#">Promote a Job</a></li>
-        <li><a class="dropdown-item" href="#">Search Designers</a></li>
-    </ul>
-</li>
-
-
-                <li class="nav-item dropdown hover-dropdown">
-    <a class="nav-link fw-medium dropdown-toggle" href="#" id="gethiredMenu">
-        Get Hired
-    </a>
-
-    <ul class="dropdown-menu shadow d-grid row" aria-labelledby="gethiredMenu">
-        <li><a class="dropdown-item" href="#">Find Work</a></li>
-        <li><a class="dropdown-item" href="#">Job Board</a></li>
-        <li><a class="dropdown-item" href="#">Freelance Work</a></li>
-    </ul>
-</li>
-
-                <li class="nav-item dropdown hover-dropdown">
-    <a class="nav-link fw-medium dropdown-toggle" href="#" id="communityMenu">
-        Community
-    </a>
-
-    <ul class="dropdown-menu shadow" aria-labelledby="communityMenu">
-        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-        <li><a class="dropdown-item" href="#">Meetups</a></li>
-        <li><a class="dropdown-item" href="#">Events</a></li>
-        <li><a class="dropdown-item" href="#">Teams</a></li>
-    </ul>
-</li>
-
-            </ul>
-
-            <!-- Right Buttons -->
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a href="signup.html" class="btn rounded-pill px-4 me-2">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a href="login.html" class="btn btn-dark rounded-pill px-4">Log In</a>
-                </li>
-            </ul>
-
+            
+            
+            
         </div>
-    </div>
-</nav> <br>
+        </nav> <br>
 
-    <!-- MAIN WRAPPER -->
+    
     <div class="container py-5 blog-container mt-5">
 
-        <!-- PAGE TITLE -->
+       
         <h1 class="blog-title fw-bold">Courtside:<br>The Dribbble Blog</h1>
 
-        <!-- DATE -->
+     
         <p class="blog-date">OCT 2, 2025</p>
 
-        <!-- ARTICLE TITLE -->
+       
         <h2 class="post-title fw-semibold">
             How Nixtio Built a Global Design Studio with<br>
             Flexibility, Feedback, and a Whole Lot of Dribbble
         </h2>
 
-        <!-- FEATURED IMAGE -->
+        
         <div class="featured-img my-4">
             <img src="Images/BLOG.webp" alt="Feature Image" class="img-fluid rounded"style="width: 30rem; height:30rem;">
         </div>
     </div>
 
     <!-- RIGHT SIDEBAR -->
-    <div class="sidebar " style="margin-top: 20rem;">
+    <div class="sidebar d-md-block d-none " style="margin-top: 20rem;">
         <p class="side-heading">Overtime</p>
         <p class="side-link">The Dribbble Podcast</p>
         <p class="side-link">The Power of Play</p>
@@ -149,6 +305,258 @@
             <li>Community</li>
         </ul>
     </div>
+     <div class="container my-5">
+
+  <!-- Intro text -->
+  <p class="intro-text">
+    Even the most intuitively designed website can still leave visitors unsure of what to do next
+    or struggling to find what they’re looking for. That’s where
+    <strong>Micro Interactions</strong> come in!
+  </p>
+
+  <hr>
+
+  <!-- Blog Item -->
+  <div class="blog-item d-flex gap-4 py-4">
+    <img src="Images/blog 1.webp" alt="Blog thumbnail" class="blog-thumb">
+
+    <div>
+      <span class="blog-date">OCT 2, 2025</span>
+      <h3 class="blog-title">
+        How Nixtio Built a Global Design Studio with Flexibility,
+        Feedback, and a Whole Lot of Dribbble
+      </h3>
+      <p class="blog-excerpt">
+        With roots in Ukraine and a growing team in Miami and Valencia,
+        Nixtio has built a creative practice that spans UX/UI, 3D,
+        branding, and mobile...
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Blog Item -->
+  <div class="blog-item d-flex gap-4 py-4">
+    <img src="Images/blog 2.webp" alt="Blog thumbnail" class="blog-thumb">
+
+    <div>
+      <span class="blog-date">SEP 22, 2025</span>
+      <h3 class="blog-title">
+        How Heartbeat Design Studio Rebuilt Hyros with Speed,
+        Style, and Substance
+      </h3>
+      <p class="blog-excerpt">
+        When Hyros needed a fast, full-scale rebrand, they turned to
+        Heartbeat Design Studio to bring clarity and impact...
+      </p>
+    </div>
+  </div>
+
+<hr>
+
+<div class="blog-item d-flex gap-4 py-4">
+  <img src="Images/blog 3.webp" class="blog-thumb" alt="">
+  <div>
+    <span class="blog-date">JUN 16, 2025</span>
+    <h3 class="blog-title">Celebrating Pride Month Through Design</h3>
+    <p class="blog-subtitle">Pride 2025</p>
+    <p class="blog-excerpt">
+      Dribbble is proud to celebrate the LGBTQIA+ community through design.
+      We’ve curated a selection of impactful Pride-themed artwork from our
+      talented designers.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="blog-item d-flex gap-4 py-4">
+  <img src="Images/blog 4.webp" class="blog-thumb" alt="">
+  <div>
+    <span class="blog-date">JUN 16, 2025</span>
+    <h3 class="blog-title">
+      Unlock opportunities and showcase your skills with a Webflow Expert badge
+    </h3>
+    <p class="blog-excerpt">
+      If you’re a designer who has mastered Webflow and wants to show off your
+      skills, you can earn an Expert badge for your Dribbble profile.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="blog-item d-flex gap-4 py-4">
+  <img src="Images/blog 5.webp" class="blog-thumb" alt="">
+  <div>
+    <span class="blog-date">MAY 28, 2025</span>
+    <h3 class="blog-title">
+      Balkan Bros: Building a Legacy of Trust from Progressive Insurance to AWS
+    </h3>
+    <p class="blog-excerpt">
+      BB Agency’s success story is built on long-term relationships and creative
+      innovation, creating trust across industries and companies.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="blog-item d-flex gap-4 py-4">
+  <img src="Images/blog 6.webp" class="blog-thumb" alt="">
+  <div>
+    <span class="blog-date">MAY 20, 2025</span>
+    <h3 class="blog-title">
+      How to Make Emails That Survive the Delete Button
+    </h3>
+    <p class="blog-excerpt">
+      What worked years ago no longer captures attention. Learn why emails end
+      up unread—and how to fix it.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="blog-item d-flex gap-4 py-4">
+  <img src="Images/blog 7.webp" class="blog-thumb" alt="">
+  <div>
+    <span class="blog-date">MAY 13, 2025</span>
+    <h3 class="blog-title">
+      Merging Craftsmanship with Modern Design
+    </h3>
+    <p class="blog-subtitle">Kiza – Clothing Label Sketches</p>
+    <p class="blog-excerpt">
+      Greg Grigoriou’s design journey bridges traditional craftsmanship with
+      modern digital tools.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="blog-item d-flex gap-4 py-4">
+  <img src="Images/blog 2.webp" class="blog-thumb" alt="">
+  <div>
+    <span class="blog-date">MAY 1, 2025</span>
+    <h3 class="blog-title">Work In Progress, Part 10 🚧</h3>
+    <p class="blog-subtitle">STARGATE</p>
+    <p class="blog-excerpt">
+      Learn more about April’s product releases and our pivot to a
+      revenue-sharing marketplace.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="blog-item d-flex gap-4 py-4">
+  <img src="Images/blog 1.webp" class="blog-thumb" alt="">
+  <div>
+    <span class="blog-date">APR 8, 2025</span>
+    <h3 class="blog-title">
+      Pushing the Boundaries of Logo Design Through Storytelling and Expression
+    </h3>
+    <p class="blog-subtitle">R ✦ Sketching / Concepts</p>
+    <p class="blog-excerpt">
+      We talked to Brazilian graphic designer Breno Bitencourt about expressive
+      logo design.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="blog-item d-flex gap-4 py-4">
+  <img src="Images/blog 3.webp" class="blog-thumb" alt="">
+  <div>
+    <span class="blog-date">MAR 24, 2025</span>
+    <h3 class="blog-title">What Makes a Great Icon Set?</h3>
+    <p class="blog-excerpt">
+      Learn how to create a cohesive and unified icon set with tips from Noun
+      Project.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="blog-item d-flex gap-4 py-4">
+  <img src="Images/blog 5.webp" class="blog-thumb" alt="">
+  <div>
+    <span class="blog-date">MAR 17, 2025</span>
+    <h3 class="blog-title">Work In Progress, Part 9 🚧</h3>
+    <p class="blog-subtitle">90's workspace</p>
+    <p class="blog-excerpt">
+      Why Dribbble is pivoting from ads to a revenue-sharing marketplace.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="blog-item d-flex gap-4 py-4">
+  <img src="Images/blog 6.webp" class="blog-thumb" alt="">
+  <div>
+    <span class="blog-date">MAR 4, 2025</span>
+    <h3 class="blog-title">Work In Progress, Part 8 🚧</h3>
+    <p class="blog-subtitle">Beep Boop Beep</p>
+    <p class="blog-excerpt">
+      Introducing Service Search to help clients find and compare designers.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="blog-item d-flex gap-4 py-4">
+  <img src="Images/blog 7.webp" class="blog-thumb" alt="">
+  <div>
+    <span class="blog-date">MAR 3, 2025</span>
+    <h3 class="blog-title">
+      Infusing Retro Boldness into Outdoor Design
+    </h3>
+    <p class="blog-subtitle">Nike Trail Logo Badge Designs</p>
+    <p class="blog-excerpt">
+      We interviewed Danielle Podeszek about bold logo design for outdoor brands.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="blog-item d-flex gap-4 py-4">
+  <img src="Images/blog 3.webp" class="blog-thumb" alt="">
+  <div>
+    <span class="blog-date">FEB 10, 2025</span>
+    <h3 class="blog-title">
+      Frans Bergström: Elevating Digital Products with Purposeful Illustration
+    </h3>
+    <p class="blog-subtitle">Profile picture illustration</p>
+    <p class="blog-excerpt">
+      Frans blends storytelling, illustration, and motion design into meaningful
+      digital experiences.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="blog-item d-flex gap-4 py-4">
+  <img src="Images/blog 5.webp" class="blog-thumb" alt="">
+  <div>
+    <span class="blog-date">FEB 5, 2025</span>
+    <h3 class="blog-title">Work In Progress, Part 7 🚧</h3>
+    <p class="blog-subtitle">Technicolor Robot</p>
+    <p class="blog-excerpt">
+      Introducing Milestones—get paid incrementally as project phases are
+      completed.
+    </p>
+  </div>
+</div>
+
+</div>
 
 </body>
 </html>
